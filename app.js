@@ -20,6 +20,7 @@ reset();
 document.querySelector('.btn-roll').addEventListener('click',function(){
 
     if(gamePlay){
+        playSound();
         var dice = Math.floor(Math.random() * 6) +1 ;
     var diceDOM = document.querySelector('.dice');
     diceDOM.style.display = 'block';
@@ -48,6 +49,7 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
         document.querySelector('.player-'+activePlayer+'-panel').classList.remove('active');
         document.querySelector('.player-'+activePlayer+'-panel').classList.add('winner');
         document.querySelector('.dice').style.display = 'none';
+        winner();
         gamePlay = false;
 
     } else {
@@ -91,4 +93,12 @@ document.getElementById('name-1').textContent = "Player 2";
 document.querySelector('.player-0-panel').classList.remove('winner');
 document.querySelector('.player-1-panel').classList.remove('winner');
 document.querySelector('.player-'+activePlayer+'-panel').classList.add('active');
+}
+
+function playSound(){
+    new Audio('diceRoll.m4a').play();
+}
+
+function winner(){
+    new Audio('winner.wav').play();
 }
