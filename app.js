@@ -25,8 +25,10 @@ document.querySelector('.btn-roll').addEventListener('click',function(){
     var diceDOM = document.querySelector('.dice');
     diceDOM.style.display = 'block';
     diceDOM.src = 'dice-'+dice+'.png';
+
     if(prevDiceValue !== 0 && prevDiceValue === 6 && prevDiceValue === dice){
         scores[activePlayer] = 0;
+        document.getElementById('score-'+activePlayer).textContent = scores[activePlayer];
         nextPlayer();
     }else {
         prevDiceValue = dice;
@@ -103,7 +105,7 @@ document.querySelector('.player-'+activePlayer+'-panel').classList.add('active')
 }
 
 function playSound(){
-    new Audio('diceRoll.m4a').play();
+    //new Audio('diceRoll.m4a').play();
 }
 
 function winner(){
