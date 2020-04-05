@@ -109,6 +109,7 @@ function playSound(){
 }
 
 function winner(){
+    // added dice sound
     new Audio('winner.wav').play();
 }
 
