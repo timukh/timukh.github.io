@@ -105,7 +105,7 @@ document.querySelector('.player-'+activePlayer+'-panel').classList.add('active')
 }
 
 function playSound(){
-    //new Audio('diceRoll.m4a').play();
+    new Audio('diceRoll.m4a').play();
 }
 
 function winner(){

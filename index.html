@@ -5,7 +5,11 @@
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">
         <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
         <link type="text/css" rel="stylesheet" href="style.css">
-        
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <title>Pig Game</title>
     </head>
 
@@ -17,11 +21,53 @@
             <span class="counter-item">1</span>
             <span class="counter-item">8</span>
             <span class="counter-item">4</span>
-  </div>
+        </div>
+        
+        <div class="container">
+            <div class="col-sm-1">
+                <div data-toggle="modal" data-target="#myModal"><button><font size="3" color= "black">Rules</font></button></div>
+                <div id="myModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                  
+                      <!-- Modal content-->
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h2 class="modal-title">Rules</h2>
+                        </div>
+                        <div class="modal-body">
+                          <p>
+                            Pig is a simple two player dice game which in its basic form is playable with just a single die. You win by being the first player to score 100 or more points. <br>
+
+                            <h3>So how do you play Pig?</h3>
+                            Choose a player to go first. That player <b>rolls a dice</b> and scores as many points as the total shown on the <b>Current</b> score board providing the die doesn’t roll a 1. The player may continue rolling and accumulating points (but risk rolling a 1) or end his turn by selecting <b>Hold</b>.<br>
+                            <br>
+                            If the player rolls a 1 his turn is over, he loses all points accumulated in that turn, and passes the die to the next player.
+                            <br><br>
+                            To hold onto the point accumulated in a turn, the player must select <b>Hold</b> and all the points will be added to his total score.
+                            <br><br>
+                            Play passes from player to player until a winner is determined.
+                            <br>
+                            <h3>How do you win?</h3>
+                            The first player to accumulate 100 or more points wins the game.
+
+                          </p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                      </div>
+                  
+                    </div>
+                  </div>
+            </div>
+        </div>
+        
         <div class="wrapper clearfix">
+            
             <div class="player-0-panel active">
                 <div class="player-name" id="name-0">Player 1</div>
-                <div class="player-score" id="score-0">43</div>
+                <div class="player-score" id="score-0">0</div>
                 <div class="player-current-box">
                     <div class="player-current-label">Current</div>
                     <div class="player-current-score" id="current-0">11</div>
@@ -30,7 +76,7 @@
             
             <div class="player-1-panel">
                 <div class="player-name" id="name-1">Player 2</div>
-                <div class="player-score" id="score-1">72</div>
+                <div class="player-score" id="score-1">0</div>
                 <div class="player-current-box">
                     <div class="player-current-label">Current</div>
                     <div class="player-current-score" id="current-1">0</div>
